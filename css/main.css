@@ -1,0 +1,146 @@
+/* ==========================================================================
+   PulseSync Main Design System & Global Styles (Light Mode - Mocks Emilio)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Light Theme Color Palette */
+  --bg-dark: #f8fafc;
+  --bg-dark-depth: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --bg-glass-card: #ffffff;
+  
+  /* Primary Gradients & Accents */
+  --primary-blue: #185FA5;
+  --primary-emerald: #1D9E75;
+  --primary-gradient: linear-gradient(135deg, #185FA5 0%, #1D9E75 100%);
+  --primary-gradient-hover: linear-gradient(135deg, #134e89 0%, #168562 100%);
+
+  /* Role Accent Colors & Light Tints */
+  --role-admin: #8b5cf6;
+  --role-admin-bg: #F3E8FF;
+  --role-trainer: #185FA5;
+  --role-trainer-bg: #E6F1FB;
+  --role-athlete: #1D9E75;
+  --role-athlete-bg: #E1F5EE;
+
+  /* Neutrals & Borders */
+  --text-main: #1a1a1a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border-glass: #e2e8f0;
+  --border-glass-light: #e8e8e8;
+  --border-accent: #185FA5;
+
+  /* Shadows */
+  --shadow-glass: 0 15px 35px rgba(0, 0, 0, 0.07), 0 3px 10px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 4px 20px rgba(24, 95, 165, 0.15);
+
+  /* Layout */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ambient Glowing Background Orbs (Light & Subtle) */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  top: -10%;
+  left: -10%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(24, 95, 165, 0.07) 0%, rgba(29, 158, 117, 0.03) 70%, transparent 100%);
+  animation: orbFloat 18s ease-in-out infinite alternate;
+}
+
+body::after {
+  bottom: -15%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(29, 158, 117, 0.06) 0%, rgba(139, 92, 246, 0.03) 70%, transparent 100%);
+  animation: orbFloat 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.1); }
+  100% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Pulse indicator dot */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  box-shadow: 0 0 10px rgba(24, 95, 165, 0.5);
+  display: inline-block;
+  animation: pulseDotAnim 2s infinite;
+}
+
+@keyframes pulseDotAnim {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(24, 95, 165, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(24, 95, 165, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(24, 95, 165, 0); }
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#17223b" />
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Container -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Grid Circles -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+  <circle cx="256" cy="256" r="130" fill="none" stroke="rgba(255,255,255,0.08)" stroke-dasharray="6,6" stroke-width="2" />
+  
+  <!-- Outer Glowing Accent Ring -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="url(#ringGrad)" stroke-width="6" filter="url(#glow)" />
+  
+  <!-- Heartbeat / EKG Pulse Line -->
+  <path d="M 90 256 H 180 L 210 190 L 235 320 L 270 140 L 305 350 L 330 220 L 350 256 H 422" 
+        fill="none" 
+        stroke="url(#pulseGrad)" 
+        stroke-width="14" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        filter="url(#glow)" />
+        
+  <!-- Pulsing Target Node Dots -->
+  <circle cx="270" cy="140" r="9" fill="#00f2fe" filter="url(#glow)" />
+  <circle cx="305" cy="350" r="9" fill="#4facfe" filter="url(#glow)" />
+  <circle cx="256" cy="256" r="5" fill="#ffffff" />
+</svg>

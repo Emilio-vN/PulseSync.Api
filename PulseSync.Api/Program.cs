@@ -18,6 +18,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Serve PWA static assets from wwwroot (index.html, manifest.json, service-worker.js, css, js)
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
 
 app.Run();

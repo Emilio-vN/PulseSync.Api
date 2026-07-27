@@ -1,0 +1,20 @@
+{
+  "name": "PulseSync",
+  "short_name": "PulseSync",
+  "description": "Plataforma de Monitoreo de Rendimiento Deportivo y Salud",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0f19",
+  "theme_color": "#00f2fe",
+  "lang": "es",
+  "categories": ["sports", "fitness", "health"],
+  "icons": [
+    {
+      "src": "./assets/icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

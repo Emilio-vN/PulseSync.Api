@@ -1,0 +1,392 @@
+/* ==========================================================================
+   PulseSync UI Component Styles (Light Mode - Refinado según Mocks Emilio)
+   ========================================================================== */
+
+/* Brand Header & Mock Emilio Logo Box */
+.brand-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.brand-icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #185FA5 0%, #1D9E75 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(24, 95, 165, 0.3);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.brand-icon-box:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.brand-title-heading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #185FA5;
+  line-height: 1.1;
+}
+
+.brand-subtitle-tag {
+  font-size: 0.875rem;
+  color: #888888;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* Header / Brand Logo Compact */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.brand-logo-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Form Controls (Exact Mocks Emilio Light Fields) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #888888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.form-label-center {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888888;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #aaaaaa;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background: #f5f5f5;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 14px;
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-input::placeholder {
+  color: #bbbbbb;
+}
+
+.form-input:focus {
+  border-color: #185FA5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.15);
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: #185FA5;
+}
+
+/* Password Toggle Icon */
+.toggle-password-btn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #bbbbbb;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.toggle-password-btn:hover {
+  color: #1a1a1a;
+}
+
+/* Forgot password link wrapper */
+.forgot-wrapper {
+  text-align: right;
+  margin-bottom: 24px;
+  margin-top: 6px;
+}
+
+.forgot-link {
+  font-size: 0.78rem;
+  color: #185FA5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Role Selector Grid / Cards (Exact Mock Emilio Style) */
+.role-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.role-card-option {
+  position: relative;
+}
+
+.role-card-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.role-card-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 8px;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.role-card-icon {
+  font-size: 1.35rem;
+}
+
+.role-card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #aaaaaa;
+  transition: color 0.2s ease;
+}
+
+/* Selected Role Themes (Mocks Emilio Color Match) */
+.role-card-option[data-role="trainer"] input[type="radio"]:checked + .role-card-label {
+  background: #E6F1FB;
+  border-color: #185FA5;
+}
+.role-card-option[data-role="trainer"] input[type="radio"]:checked + .role-card-label .role-card-title {
+  color: #185FA5;
+}
+
+.role-card-option[data-role="athlete"] input[type="radio"]:checked + .role-card-label {
+  background: #E1F5EE;
+  border-color: #1D9E75;
+}
+.role-card-option[data-role="athlete"] input[type="radio"]:checked + .role-card-label .role-card-title {
+  color: #1D9E75;
+}
+
+.role-card-option[data-role="admin"] input[type="radio"]:checked + .role-card-label {
+  background: #F3E8FF;
+  border-color: #8b5cf6;
+}
+.role-card-option[data-role="admin"] input[type="radio"]:checked + .role-card-label .role-card-title {
+  color: #8b5cf6;
+}
+
+/* Primary Button (Exact Mock Emilio Style) */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: #185FA5;
+  border: none;
+  border-radius: 16px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(24, 95, 165, 0.3);
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(24, 95, 165, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Register Footer (Exact Mock Emilio) */
+.register-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+}
+
+.register-link {
+  color: #185FA5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* Quick Presets */
+.presets-container {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.presets-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.presets-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.preset-chip {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: var(--radius-full);
+  color: #64748b;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.preset-chip:hover {
+  background: #E6F1FB;
+  border-color: #185FA5;
+  color: #185FA5;
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 280px;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: slideInRight 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-success { border-left: 4px solid #1D9E75; }
+.toast-error { border-left: 4px solid var(--accent-rose); }
+.toast-info { border-left: 4px solid #185FA5; }
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

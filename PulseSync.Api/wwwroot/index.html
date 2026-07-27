@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="PulseSync - Plataforma de Monitoreo de Rendimiento Deportivo y Salud. Entrena con propósito.">
+  <meta name="theme-color" content="#185FA5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PulseSync">
+
+  <title>PulseSync | Iniciar Sesión</title>
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon.svg">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       LOGIN VIEW SECTION (Basada en Mocks Emilio - Pantalla Inicio V1)
+       ========================================================================== -->
+  <section id="login-view" class="login-container">
+    <main class="login-wrapper glass-panel">
+      
+      <!-- Desktop Left Hero Panel -->
+      <aside class="login-hero">
+        <div class="hero-glow-circle"></div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> Monitoreo de Alto Rendimiento
+          </div>
+          <h1 class="hero-title">PulseSync <br><span class="text-gradient">Entrena con propósito</span></h1>
+          <p class="hero-description">
+            Conecta entrenadores, atletas y administradores en una sola plataforma de seguimiento biomecánico y fisiológico en tiempo real.
+          </p>
+
+          <div class="hero-features">
+            <article class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>PWA Offline First</h4>
+                <p>Acceso instantáneo desde cualquier dispositivo móvil o web sin descargas pesadas.</p>
+              </div>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <div class="feature-text">
+                <h4>Gestión Multi-Rol</h4>
+                <p>Paneles personalizados e independientes para Coach, Atleta y Administrador.</p>
+              </div>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">📊</div>
+              <div class="feature-text">
+                <h4>Métricas en Tiempo Real</h4>
+                <p>Visualiza HRV, zonas de pulso cardíaco y carga de entrenamiento acumulada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <footer class="hero-footer">
+          &copy; 2026 PulseSync. Todos los derechos reservados.
+        </footer>
+      </aside>
+
+      <!-- Right Login Form Card -->
+      <div class="login-card">
+        <header class="login-header-mobile">
+          <div class="brand-logo-card">
+            <div class="brand-icon-box">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h1 class="brand-title-heading text-gradient">PulseSync</h1>
+            <p class="brand-subtitle-tag">Entrena con propósito</p>
+          </div>
+        </header>
+
+        <form id="login-form" novalidate>
+          
+          <!-- Selector de tipo de cuenta (Mock Emilio Style) -->
+          <div class="form-group">
+            <label class="form-label-center">INGRESA COMO</label>
+            <div class="role-selector-grid">
+              
+              <!-- Role: Admin -->
+              <div class="role-card-option" data-role="admin">
+                <input type="radio" name="user-role" id="role-admin" value="admin">
+                <label for="role-admin" class="role-card-label">
+                  <span class="role-card-icon">👑</span>
+                  <span class="role-card-title">Admin</span>
+                </label>
+              </div>
+
+              <!-- Role: Coach -->
+              <div class="role-card-option" data-role="trainer">
+                <input type="radio" name="user-role" id="role-trainer" value="trainer" checked>
+                <label for="role-trainer" class="role-card-label">
+                  <span class="role-card-icon">🎯</span>
+                  <span class="role-card-title">Coach</span>
+                </label>
+              </div>
+
+              <!-- Role: Atleta -->
+              <div class="role-card-option" data-role="athlete">
+                <input type="radio" name="user-role" id="role-athlete" value="athlete">
+                <label for="role-athlete" class="role-card-label">
+                  <span class="role-card-icon">🏊</span>
+                  <span class="role-card-title">Atleta</span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Correo electrónico -->
+          <div class="form-group">
+            <label for="email-input" class="form-label">Correo electrónico</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <input 
+                type="email" 
+                id="email-input" 
+                class="form-input" 
+                placeholder="tu@correo.com"
+                value="coach.carlos@pulsesync.io" 
+                required 
+                autocomplete="username"
+              >
+            </div>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="form-group" style="margin-bottom: 8px;">
+            <label for="password-input" class="form-label">Contraseña</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <input 
+                type="password" 
+                id="password-input" 
+                class="form-input" 
+                placeholder="••••••••" 
+                value="CoachPass123"
+                required 
+                autocomplete="current-password"
+              >
+              <button type="button" id="toggle-password" class="toggle-password-btn" title="Mostrar/ocultar contraseña" aria-label="Mostrar/ocultar contraseña">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Forgot Password -->
+          <div class="forgot-wrapper">
+            <a href="#" class="forgot-link" onclick="alert('Recuperación de contraseña en desarrollo.'); return false;">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <!-- Botón entrar dinámico según rol seleccionado -->
+          <button type="submit" id="submit-btn" class="btn-primary">
+            <span id="submit-btn-text">Entrar como Coach</span>
+          </button>
+
+          <!-- Registro -->
+          <div class="register-footer">
+            <span>¿No tienes cuenta? </span>
+            <a href="#" class="register-link" onclick="alert('Módulo de registro en desarrollo.'); return false;">Regístrate</a>
+          </div>
+
+        </form>
+
+        <!-- Quick Presets -->
+        <div class="presets-container">
+          <div class="presets-title">⚡ Acceso Rápido de Prueba</div>
+          <div class="presets-buttons">
+            <button class="preset-chip" data-preset-role="admin">👑 Admin</button>
+            <button class="preset-chip" data-preset-role="trainer">🎯 Coach</button>
+            <button class="preset-chip" data-preset-role="athlete">🏊 Atleta</button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </section>
+
+  <!-- ==========================================================================
+       DASHBOARD VIEW SECTION
+       ========================================================================== -->
+  <section id="dashboard-view" class="dashboard-container hidden">
+    <!-- Navbar -->
+    <header class="dash-navbar">
+      <div class="brand-header">
+        <div class="brand-logo-wrapper" style="width: 36px; height: 36px;">
+          <img src="assets/icons/icon.svg" alt="PulseSync Logo" class="brand-logo-svg">
+        </div>
+        <span class="brand-title text-gradient" style="font-size: 1.4rem;">PulseSync</span>
+      </div>
+
+      <div class="dash-nav-right">
+        <div class="user-badge-pill">
+          <div id="nav-user-avatar" class="avatar-circle">C</div>
+          <span id="nav-user-name" class="user-name">Coach</span>
+          <span id="nav-role-tag" class="role-tag trainer">Coach</span>
+        </div>
+        <button id="logout-btn" class="btn-secondary" title="Cerrar sesión activa">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+          </svg>
+          <span class="desktop-only">Salir</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dynamic Main Content Container -->
+    <main id="role-dashboard-content" class="dash-content"></main>
+  </section>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
