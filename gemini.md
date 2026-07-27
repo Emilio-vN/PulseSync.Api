@@ -11,13 +11,14 @@
 - [x] Simulación de Roles (Superusuario, Coach, Atleta) mediante presets.
 - [x] Integración de frontend estático (`wwwroot`) servido desde el backend ASP.NET Core.
 - [x] Configuración de `launchSettings.json` para autostart del navegador en la ruta raíz.
-- [x] Adaptación de la pantalla de inicio basada en `Mocks Emilio/Pantalla Inicio V1/Pantalla Inicio .html` (Logo badge, slogan "Entrena con propósito", selectores de tipo de cuenta dinámicos "Coach", "Atleta", "Admin" y footer de registro).
+- [x] Implementación de la Pantalla de Inicio V1 basada en Mocks Emilio (Logo badge, slogan "Entrena con propósito", fondo claro y footer de registro).
+- [x] Lógica reactiva de UI para selección de roles (Coach, Atleta, Admin) con colores dinámicos.
+- [x] Primer commit de hito arquitectónico realizado en Git.
 
 ## 📋 Features Futuras
-- [ ] Creación de entidades/modelos base en C# (Superusuario, Coach, Atleta).
-- [ ] Configuración inicial del `DbContext` y conexión a `PulseSyncDB`.
-- [ ] Reemplazo del mock de login por un `AuthController` real en el backend.
-- [ ] Maquetado de la vista principal del Coach basándose en `Mocks Emilio/Interfaz Coach/Interfaz Principal Coach`.
+- [ ] Backend: Creación de entidades/modelos base en C# (Superusuario, Entrenador, Atleta).
+- [ ] Backend: Configuración del DbContext y conexión a SQL Server (PulseSyncDB).
+- [ ] Frontend: Maquetar la siguiente vista del dashboard desde la carpeta `Mocks Emilio`.
 
 ## ⚠️ Deuda Técnica (Technical Debt)
 - [ ] Reemplazar la lógica simulada de `auth.js` por llamadas `fetch` a la API.
