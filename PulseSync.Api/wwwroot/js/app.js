@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!submitBtnText || !submitBtn) return;
 
     if (roleId === 'admin') {
-      submitBtnText.textContent = 'Entrar como Admin';
+      submitBtnText.textContent = 'Entrar como SuperEmilio';
       submitBtn.style.background = 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)';
       submitBtn.style.boxShadow = '0 6px 20px rgba(139, 92, 246, 0.4)';
     } else if (roleId === 'trainer') {

@@ -7,8 +7,8 @@ const STORAGE_KEY = 'pulsesync_session';
 export const ROLES = {
   ADMIN: {
     id: 'admin',
-    name: 'Superusuario (Administrador)',
-    shortName: 'Administrador',
+    name: 'SuperEmilio',
+    shortName: 'SuperEmilio',
     badgeClass: 'admin',
     icon: '👑'
   },
