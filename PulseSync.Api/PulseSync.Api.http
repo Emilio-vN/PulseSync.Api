@@ -1,6 +1,27 @@
-@PulseSync.Api_HostAddress = http://localhost:5159
+@PulseSync_HostAddress = http://localhost:5159
 
-GET {{PulseSync.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{PulseSync_HostAddress}}/index.html
+Accept: text/html
+
+###
+
+POST {{PulseSync_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "Password123!",
+    "name": "Test User"
+}
+
+###
+
+POST {{PulseSync_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "Password123!"
+}
 
 ###
